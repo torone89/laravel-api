@@ -2209,13 +2209,13 @@ var render = function render() {
     staticClass: "card-body"
   }, [_c("h1", [_vm._v(_vm._s(_vm.post.id))]), _vm._v(" "), _c("h5", {
     staticClass: "card-title"
-  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("p", {
+  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("h6", {
+    staticClass: "card-subtitle mb-2 text-muted"
+  }, [_vm._v("\n      Autore: " + _vm._s(_vm.post.user.name) + "\n    ")]), _vm._v(" "), _c("h6", {
+    staticClass: "card-subtitle mb-2 text-muted"
+  }, [_vm._v("\n      Pubblicato il: " + _vm._s(_vm.publishedAt) + "\n    ")]), _vm._v(" "), _c("p", {
     staticClass: "card-text"
-  }, [_vm._v("\n      " + _vm._s(_vm.post.content) + "\n    ")])]), _vm._v(" "), _c("ul", {
-    staticClass: "list-group list-group-flush"
-  }, [_c("li", {
-    staticClass: "list-group-item"
-  }, [_vm._v("Pubblicato il: " + _vm._s(_vm.publishedAt))])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n      " + _vm._s(_vm.post.content) + "\n    ")])]), _vm._v(" "), _c("div", {
     staticClass: "card-footer d-flex justify-content-between align-items-center"
   }, [_c("span", {
     staticClass: "badge badge-pill",
