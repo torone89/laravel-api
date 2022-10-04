@@ -1959,7 +1959,18 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     post: Object
   },
-  methods: {}
+  methods: {},
+  computed: {
+    publishedAt: function publishedAt() {
+      var postDate = new Date(this.post.created_at);
+      var day = postDate.getDate();
+      var month = postDate.getMonth() + 1;
+      var year = postDate.getFullYear();
+      if (day < 10) day = "0" + day;
+      if (month < 10) month = "0" + month;
+      return "".concat(day, "/").concat(month, "/").concat(year);
+    }
+  }
 });
 
 /***/ }),
@@ -2141,7 +2152,7 @@ var render = function render() {
     staticClass: "list-group list-group-flush"
   }, [_c("li", {
     staticClass: "list-group-item"
-  }, [_vm._v("Pubblicato il: " + _vm._s(_vm.post.created_at))])])]);
+  }, [_vm._v("Pubblicato il: " + _vm._s(_vm.publishedAt))])])]);
 };
 
 var staticRenderFns = [];

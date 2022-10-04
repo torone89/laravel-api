@@ -8,7 +8,7 @@
       </p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Pubblicato il: {{ post.created_at }}</li>
+      <li class="list-group-item">Pubblicato il: {{ publishedAt }}</li>
       <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
       <li class="list-group-item">Vestibulum at eros</li> -->
     </ul>
@@ -39,6 +39,17 @@ export default {
 
   props: { post: Object },
   methods: {},
+  computed: {
+    publishedAt() {
+      const postDate = new Date(this.post.created_at);
+      let day = postDate.getDate();
+      let month = postDate.getMonth() + 1;
+      const year = postDate.getFullYear();
+      if (day < 10) day = "0" + day;
+      if (month < 10) month = "0" + month;
+      return `${day}/${month}/${year}`;
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
