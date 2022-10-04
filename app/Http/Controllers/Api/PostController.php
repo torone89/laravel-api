@@ -18,8 +18,9 @@ class PostController extends Controller
         // $posts = Post::all();
         $posts = Post::orderBy('created_at', 'DESC')
             ->with('category', 'tags', 'user')
-            // ->paginate()
-            ->get();
+            ->paginate(9);
+        //o uso get o uso paginate
+        // ->get();
 
 
         return response()->json($posts);
