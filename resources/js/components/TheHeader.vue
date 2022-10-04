@@ -27,6 +27,7 @@
 <script>
 export default {
   name: "TheHeader",
+
   props: {
     title: String,
   },
