@@ -1,23 +1,28 @@
 <template>
   <section id="posts-list">
     <h2 class="my-3">Posts</h2>
-    <div v-if="posts.length">
-      <post-card v-for="post in posts" :key="post.id" :post="post" />
+    <app-loader v-if="true" />
+    <div v-else>
+      <div v-if="posts.length">
+        <post-card v-for="post in posts" :key="post.id" :post="post" />
+      </div>
+      <h5 v-else>Non ci sono posts</h5>
     </div>
-    <h5 v-else>Non ci sono posts</h5>
   </section>
 </template>
 
 <script>
+import AppLoader from "../AppLoader.vue";
 import PostCard from "./PostCard.vue";
 export default {
   name: "PostsList",
   data() {
     return {
       posts: [],
+      isLoading: false,
     };
   },
-  components: { PostCard },
+  components: { PostCard, AppLoader },
   methods: {
     fetchPosts() {
       axios
