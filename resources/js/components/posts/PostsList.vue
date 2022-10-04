@@ -20,7 +20,9 @@
 
     <div v-else>
       <div v-if="posts.length">
-        <post-card v-for="post in posts" :key="post.id" :post="post" />
+        <div class="row justify-content-between">
+          <post-card v-for="post in posts" :key="post.id" :post="post" />
+        </div>
       </div>
       <h5 v-else>Non ci sono posts</h5>
     </div>

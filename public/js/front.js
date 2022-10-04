@@ -2198,13 +2198,16 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "card",
-    staticStyle: {
-      width: "18rem"
+    staticClass: "card col-3 m-4 p-0"
+  }, [_c("img", {
+    staticClass: "card-img-top img-fluid",
+    attrs: {
+      src: _vm.post.image,
+      alt: "Card image cap"
     }
-  }, [_c("div", {
+  }), _vm._v(" "), _c("div", {
     staticClass: "card-body"
-  }, [_c("h5", {
+  }, [_c("h1", [_vm._v(_vm._s(_vm.post.id))]), _vm._v(" "), _c("h5", {
     staticClass: "card-title"
   }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("p", {
     staticClass: "card-text"
@@ -2212,7 +2215,18 @@ var render = function render() {
     staticClass: "list-group list-group-flush"
   }, [_c("li", {
     staticClass: "list-group-item"
-  }, [_vm._v("Pubblicato il: " + _vm._s(_vm.publishedAt))])])]);
+  }, [_vm._v("Pubblicato il: " + _vm._s(_vm.publishedAt))])]), _vm._v(" "), _c("div", {
+    staticClass: "card-footer d-flex justify-content-between align-items-center"
+  }, [_c("span", {
+    staticClass: "badge badge-pill",
+    "class": "badge-".concat(_vm.post.category ? _vm.post.category.color : "light")
+  }, [_vm._v("\n      " + _vm._s(_vm.post.category ? _vm.post.category.label : "nessuna"))]), _vm._v(" "), _c("div", _vm._l(_vm.post.tags, function (tag) {
+    return _c("span", {
+      key: tag.id,
+      staticClass: "badge mr-1 text-white",
+      style: "background-color:".concat(tag.color)
+    }, [_vm._v("\n        " + _vm._s(tag.label) + "\n      ")]);
+  }), 0)])]);
 };
 
 var staticRenderFns = [];
@@ -2261,14 +2275,16 @@ var render = function render() {
     attrs: {
       "aria-hidden": "true"
     }
-  }, [_vm._v("×")])])]) : _c("div", [_vm.posts.length ? _c("div", _vm._l(_vm.posts, function (post) {
+  }, [_vm._v("×")])])]) : _c("div", [_vm.posts.length ? _c("div", [_c("div", {
+    staticClass: "row justify-content-between"
+  }, _vm._l(_vm.posts, function (post) {
     return _c("post-card", {
       key: post.id,
       attrs: {
         post: post
       }
     });
-  }), 1) : _c("h5", [_vm._v("Non ci sono posts")])])], 1);
+  }), 1)]) : _c("h5", [_vm._v("Non ci sono posts")])])], 1);
 };
 
 var staticRenderFns = [];

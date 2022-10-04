@@ -15,7 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'DESC')->get();
+        $posts = Post::orderBy('created_at', 'DESC')
+            ->with('category', 'tags')
+            ->get();
+        // $posts = Post::all();
+
         return response()->json($posts);
     }
 
