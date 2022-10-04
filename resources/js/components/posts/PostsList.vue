@@ -1,16 +1,15 @@
 <template>
   <section id="posts-list">
     <h2 class="my-3">Posts</h2>
-    <ul v-if="posts.length">
-      <li v-for="post in posts" :key="post.id">
-        {{ post.title }}
-      </li>
-    </ul>
+    <div v-if="posts.length">
+      <post-card v-for="post in posts" :key="post.id" :post="post" />
+    </div>
     <h5 v-else>Non ci sono posts</h5>
   </section>
 </template>
 
 <script>
+import PostCard from "./PostCard.vue";
 export default {
   name: "PostsList",
   data() {
@@ -18,6 +17,7 @@ export default {
       posts: [],
     };
   },
+  components: { PostCard },
   methods: {
     fetchPosts() {
       axios
