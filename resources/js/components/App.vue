@@ -1,20 +1,20 @@
 
 <template>
   <div class="content">
-    <Placeholder :title="title" />
+    <the-header :title="title" />
   </div>
 </template>
 
 <script>
-import Placeholder from "./Placeholder.vue";
+import TheHeader from "./TheHeader.vue";
 export default {
   name: "App",
   data() {
     return {
-      title: "Work In Progress..",
+      title: "BoolPress",
     };
   },
-  components: { Placeholder },
+  components: { TheHeader },
 };
 </script>
 
