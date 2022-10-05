@@ -3,6 +3,7 @@
   <div class="content">
     <the-header :title="title" />
     <main class="container my-3"></main>
+    <router-view></router-view>
   </div>
 </template>
 
