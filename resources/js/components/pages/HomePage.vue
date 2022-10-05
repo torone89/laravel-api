@@ -7,7 +7,7 @@
 <script>
 import PostsList from "../posts/PostsList.vue";
 export default {
-  name: HomePage,
+  name: "HomePage",
   components: { PostsList },
 };
 </script>

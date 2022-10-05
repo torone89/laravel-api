@@ -2,8 +2,9 @@
 <template>
   <div class="content">
     <the-header :title="title" />
-    <main class="container my-3"></main>
-    <router-view></router-view>
+    <main class="container my-3">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
@@ -11,7 +12,7 @@
 import TheHeader from "./TheHeader.vue";
 
 export default {
-  name: App,
+  name: "App",
   components: { TheHeader },
   name: "App",
   data() {

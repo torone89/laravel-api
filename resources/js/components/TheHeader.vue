@@ -12,7 +12,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <!-- Rendo dinamici i link -->
+
+          <li v-for="link in links" :key="link.name" class="nav-item">
+            <router-link class="nav-link" :to="{ name: link.name }"
+              >{{ link.title }}
+            </router-link>
+          </li>
+
+          <!-- <li class="nav-item">
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
 
@@ -22,7 +30,7 @@
 
           <li class="nav-item">
             <router-link class="nav-link" to="/about">About</router-link>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -32,6 +40,13 @@
 <script>
 export default {
   name: "TheHeader",
+  data: () => ({
+    links: [
+      { name: "home", title: "Home" },
+      { name: "about", title: "About" },
+      { name: "contacts", title: "Contacts" },
+    ],
+  }),
 
   props: {
     title: String,
