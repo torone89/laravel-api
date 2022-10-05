@@ -7,13 +7,13 @@
     />
     <div class="card-body">
       <div class="row justify-content-between">
-        <div class="col">
+        <div class="col-6">
           <h1>{{ post.id }}</h1>
         </div>
-        <div class="col">
+        <div class="col-6 p-0 m-0">
           <router-link
             :to="{ name: 'post-detail', params: { slug: post.slug } }"
-            class="btn btn-primary btn-sm"
+            class="ml-5 mt-2 btn btn-primary btn-sm"
             ><i class="fa-solid fa-eye"></i> Vedi</router-link
           >
         </div>

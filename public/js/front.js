@@ -2620,11 +2620,11 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "row justify-content-between"
   }, [_c("div", {
-    staticClass: "col"
+    staticClass: "col-6"
   }, [_c("h1", [_vm._v(_vm._s(_vm.post.id))])]), _vm._v(" "), _c("div", {
-    staticClass: "col"
+    staticClass: "col-6 p-0 m-0"
   }, [_c("router-link", {
-    staticClass: "btn btn-primary btn-sm",
+    staticClass: "ml-5 mt-2 btn btn-primary btn-sm",
     attrs: {
       to: {
         name: "post-detail",
