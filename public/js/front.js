@@ -2583,59 +2583,7 @@ var render = function render() {
     attrs: {
       post: _vm.post
     }
-  }) : _vm._e(), _vm._v(" "), _vm._l(_vm.posts, function (post) {
-    return _c("div", {
-      key: post.id,
-      staticClass: "row justify-content-between"
-    }, [_c("div", {
-      staticClass: "card col-3 m-4 p-0"
-    }, [_c("img", {
-      staticClass: "card-img-top img-fluid",
-      attrs: {
-        src: post.image,
-        alt: "Card image cap"
-      }
-    }), _vm._v(" "), _c("div", {
-      staticClass: "card-body"
-    }, [_c("div", {
-      staticClass: "row justify-content-between"
-    }, [_c("div", {
-      staticClass: "col"
-    }, [_c("h1", [_vm._v(_vm._s(post.id))])]), _vm._v(" "), _c("div", {
-      staticClass: "col float-right"
-    }, [_c("router-link", {
-      staticClass: "btn btn-primary btn-sm",
-      attrs: {
-        to: {
-          name: "post-detail",
-          params: {
-            id: post.id
-          }
-        }
-      }
-    }, [_c("i", {
-      staticClass: "fa-solid fa-eye"
-    }), _vm._v(" Vedi")])], 1)]), _vm._v(" "), _c("h5", {
-      staticClass: "card-title"
-    }, [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c("h6", {
-      staticClass: "card-subtitle mb-2 text-muted"
-    }, [_vm._v("\n          Autore: " + _vm._s(post.user.name) + "\n        ")]), _vm._v(" "), _c("h6", {
-      staticClass: "card-subtitle mb-2 text-muted"
-    }, [_vm._v("\n          Pubblicato il: " + _vm._s(_vm.publishedAt) + "\n        ")]), _vm._v(" "), _c("p", {
-      staticClass: "card-text"
-    }, [_vm._v("\n          " + _vm._s(post.content) + "\n        ")])]), _vm._v(" "), _c("div", {
-      staticClass: "card-footer d-flex justify-content-between align-items-center"
-    }, [_c("span", {
-      staticClass: "badge badge-pill",
-      "class": "badge-".concat(post.category ? post.category.color : "light")
-    }, [_vm._v("\n          " + _vm._s(post.category ? post.category.label : "nessuna"))]), _vm._v(" "), _c("div", _vm._l(post.tags, function (tag) {
-      return _c("span", {
-        key: tag.id,
-        staticClass: "badge mr-1 text-white",
-        style: "background-color:".concat(tag.color)
-      }, [_vm._v("\n            " + _vm._s(tag.label) + "\n          ")]);
-    }), 0)])])]);
-  })], 2);
+  }) : _vm._e()], 1);
 };
 
 var staticRenderFns = [];
