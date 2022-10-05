@@ -12,7 +12,7 @@
         </div>
         <div class="col">
           <router-link
-            :to="{ name: 'post-detail', params: { id: post.id } }"
+            :to="{ name: 'post-detail', params: { slug: post.slug } }"
             class="btn btn-primary btn-sm"
             ><i class="fa-solid fa-eye"></i> Vedi</router-link
           >

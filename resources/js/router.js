@@ -24,7 +24,7 @@ routes: [
         { path: '/', component: HomePage, name: 'home' },
         { path: '/about', component: AboutPage, name: 'about' },
         { path: '/contacts', component: ContactsPage, name: 'contacts' },
-        { path: '/posts/:id', component: PostDetailPage, name: 'post-detail' },
+        { path: '/posts/:slug', component: PostDetailPage, name: 'post-detail' },
         { path: '*', component: NotFoundPage, name: 'not_found' },
         
     ]

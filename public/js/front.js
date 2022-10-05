@@ -2096,7 +2096,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.isLoading = true;
-      axios.get("http://localhost:8000/api/posts/" + this.$route.params.id).then(function (res) {
+      axios.get("http://localhost:8000/api/posts/" + this.$route.params.slug).then(function (res) {
         _this.post = res.data;
       })["catch"](function (err) {
         console.err(err);
@@ -2629,7 +2629,7 @@ var render = function render() {
       to: {
         name: "post-detail",
         params: {
-          id: _vm.post.id
+          slug: _vm.post.slug
         }
       }
     }
@@ -55139,7 +55139,7 @@ var routes = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     component: _components_pages_ContactsPage_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     name: 'contacts'
   }, {
-    path: '/posts/:id',
+    path: '/posts/:slug',
     component: _components_pages_PostDetailPage_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
     name: 'post-detail'
   }, {
