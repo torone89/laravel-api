@@ -6,7 +6,18 @@
       alt="Card image cap"
     />
     <div class="card-body">
-      <h1>{{ post.id }}</h1>
+      <div class="row justify-content-between">
+        <div class="col">
+          <h1>{{ post.id }}</h1>
+        </div>
+        <div class="col">
+          <router-link
+            :to="{ name: 'post-detail', params: { id: post.id } }"
+            class="btn btn-primary btn-sm"
+            ><i class="fa-solid fa-eye"></i> Vedi</router-link
+          >
+        </div>
+      </div>
       <h5 class="card-title">{{ post.title }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">
         Autore: {{ post.user.name }}
