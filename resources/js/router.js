@@ -8,6 +8,9 @@ import HomePage from './components/pages/HomePage.vue'
 import AboutPage from './components/pages/AboutPage.vue'
 import ContactsPage from './components/pages/ContactsPage.vue'
 
+//IMPORT PAGE ERROR SOTTO A TUTTO
+import NotFoundPAge from './components/pages/NotFoundPAge.vue'
+
 //DICO A VUE DI USARE VUEROUTER
 Vue.use(VueRouter)
 
@@ -18,7 +21,9 @@ const routes = new VueRouter({
     routes:[
         {  path: '/', component: HomePage },
         {  path: '/about', component: AboutPage },
-        {  path: '/contacts', component: ContactsPage },
+        { path: '/contacts', component: ContactsPage },
+        { path: '*', component: NotFoundPAge},
+    
     ]
 });
 
