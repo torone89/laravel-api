@@ -54,6 +54,7 @@ export default {
     };
   },
   components: { PostCard, AppLoader, AppPagination },
+
   methods: {
     fetchPosts(page = 1) {
       this.isLoading = true;
