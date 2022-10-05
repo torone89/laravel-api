@@ -19,7 +19,8 @@ Vue.use(VueRouter)
 
 //DEFINZIONE DELLE ROTTE
 const routes = new VueRouter({
-    mode:'history',
+    mode: 'history',
+    linkActiveClass: 'active',
 routes: [
         { path: '/', component: HomePage, name: 'home' },
         { path: '/about', component: AboutPage, name: 'about' },

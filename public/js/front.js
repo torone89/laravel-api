@@ -2060,7 +2060,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AboutPage_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AboutPage.vue */ "./resources/js/components/pages/AboutPage.vue");
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    AboutPage: _AboutPage_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   name: "NotFoundPage"
 });
 
@@ -2539,7 +2544,22 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div", {
+    staticClass: "d-flex flex-column justify-content-center align-items-center",
+    attrs: {
+      id: "not-found-page"
+    }
+  }, [_vm._m(0), _vm._v(" "), _c("div", [_c("button", {
+    staticClass: "btn btn-secondary",
+    attrs: {
+      type: "button"
+    },
+    on: {
+      click: function click($event) {
+        return _vm.$router.back();
+      }
+    }
+  }, [_vm._v("\n      Torna indietro\n    ")])])]);
 };
 
 var staticRenderFns = [function () {
@@ -2547,10 +2567,7 @@ var staticRenderFns = [function () {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "d-flex justify-content-center align-itmes-center",
-    attrs: {
-      id: "not-found-page"
-    }
+    staticClass: "py-2"
   }, [_c("h3", {
     staticClass: "text-center"
   }, [_vm._v("404 | Page not found")])]);
@@ -55126,6 +55143,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
 var routes = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
+  linkActiveClass: 'active',
   routes: [{
     path: '/',
     component: _components_pages_HomePage_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
